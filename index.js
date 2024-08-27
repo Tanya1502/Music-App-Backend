@@ -13,14 +13,9 @@ const cors = require("cors");
 const app = express();
 const port = 8000;
 
+app.use(cors());
+app.options("*", cors());
 
- app.use(
-   cors({
-     origin: "https://music-app-tanya.netlify.app", // Replace with your actual frontend domain
-     methods: ["GET", "POST", "PUT", "DELETE"],
-     allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
-   })
- );
 app.use(express.json());
 
 mongoose
