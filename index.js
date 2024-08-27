@@ -13,7 +13,11 @@ const cors = require("cors");
 const app = express();
 const port = 8000;
 
-app.use(cors());
+app.use(
+    cors({
+      origin: "*", // Or specify the frontend URL if needed
+    })
+);
 app.use(express.json());
 
 mongoose
