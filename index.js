@@ -15,7 +15,7 @@ const port = 8000;
 
 app.use(
   cors({
-    origin: "http://localhost:3000/", // Or specify the frontend URL if needed
+    origin: "http://localhost:3000", // Or specify the frontend URL if needed
   })
 );
 app.use(express.json());
